@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { challengeBoard } from "../reducers/challengeBoard";
 import { NoSavedChallenges } from "./NoSavedChallenges";
 import delete_icon from "../assets/delete.png";
-
 import "./MyPage.css";
 
 export const MyPage = () => {

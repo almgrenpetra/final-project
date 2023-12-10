@@ -5,7 +5,6 @@ import { challengeBoard } from "../reducers/challengeBoard";
 import data from "../data.json";
 import heart_empty from "../assets/heart_empty.svg";
 import heart_filled from "../assets/heart_filled.svg";
-import food from "../assets/food.jpg";
 import "./Home.css";
 
 export const Home = () => {
@@ -49,7 +48,7 @@ export const Home = () => {
               <div className="card-header">
                 <img
                   className="card-img"
-                  src={`./src/components/img/${challenge.categories[0]}.jpg`}
+                  src={`./src/assets/${challenge.categories[0]}.jpg`}
                 />
               </div>
               <div className="heart-container">
