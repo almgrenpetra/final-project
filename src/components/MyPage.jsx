@@ -22,7 +22,7 @@ export const MyPage = () => {
           <NoSavedChallenges />
         )}
         <div className="challenges">
-          {notCompletedChallenges &&
+          {completedChallenges &&
             completedChallenges.map((challenge) => (
               <div key={challenge.id} className="challenge">
                 <h3 className={`challenge-header ${challenge.categories[0]}`}>
