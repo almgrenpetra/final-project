@@ -1,0 +1,196 @@
+{
+  "challenges": [
+    {
+      "id": 1,
+      "categories": ["christmas", "food"],
+      "header": "Renew Your Holiday Feast",
+      "image": "./src/assets/food.jpg",
+      "description": "Try something new for the holidays! Revamp your Christmas feast with dishes like elk meatballs and wild boar ham. Wild game meat is more environmentally friendly than other types of meat, especially compared to cheap industrial meat from countries with weaker environmental and animal welfare laws.",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "categories": ["christmas", "home", "savings"],
+      "header": "DIY Delight",
+      "image": "./src/assets/christmas.jpg",
+      "description": "Embrace your crafting skills! Whether it's sewing, knitting, painting, programming, or any other craft, it's all highly appreciated. Giving the gift of your time and creativity is one of the most thoughtful gestures. Consider creating something special this holiday season.",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "categories": ["home", "christmas"],
+      "header": "Illuminate with Eco-Friendly Candles",
+      "image": "./src/assets/home.jpg",
+      "description": "Opt for beeswax or soy candles over paraffin candles. Beeswax is a natural, renewable resource, while soy candles are made from soybeans, a sustainable crop. Both are better choices for the environment compared to paraffin, which is derived from fossil fuels like oil.",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "categories": ["christmas", "holiday"],
+      "header": "Eco-Friendly Gift Wrapping",
+      "image": "./src/assets/christmas.jpg",
+      "description": "Wrap your Christmas presents in a beautiful cloth or recycled newspaper. Visit thrift stores to find yarn, lace, rag rug yarn balls, and ribbons to use as gift ribbons. Opting for sustainable and reusable wrapping materials is a thoughtful way to reduce waste during the holiday season.",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "categories": ["technology", "home"],
+      "header": "Unplug for a Weekend",
+      "image": "./src/assets/technology.jpg",
+      "description": "Take a break from screens and technology for a weekend. Spend quality time outdoors, read a book, or engage in activities that don't involve electronic devices.",
+      "complete": false
+    },
+    {
+      "id": 6,
+      "categories": ["holiday", "savings"],
+      "header": "Plan a Sustainable Staycation",
+      "image": "./src/assets/holiday.jpg",
+      "description": "Instead of traveling long distances, plan a sustainable staycation. Explore local attractions, support local businesses, and minimize your environmental impact.",
+      "complete": false
+    },
+    {
+      "id": 7,
+      "categories": ["food", "recycling"],
+      "header": "Go Zero-Waste in Your Kitchen",
+      "image": "./src/assets/food.jpg",
+      "description": "Challenge yourself to create a zero-waste kitchen. Use reusable containers, compost organic waste, and choose products with minimal packaging. Share your tips!",
+      "complete": false
+    },
+    {
+      "id": 8,
+      "categories": ["transportation", "savings"],
+      "header": "Carpool with Friends or Colleagues",
+      "image": "./src/assets/transportation.jpg",
+      "description": "Reduce emissions and save money by carpooling with friends or colleagues. Coordinate schedules and take turns driving. Enjoy the company and shared responsibilities!",
+      "complete": false
+    },
+    {
+      "id": 9,
+      "categories": ["home", "recycling"],
+      "header": "Upcycle Old Furniture or Decor",
+      "image": "./src/assets/home.jpg",
+      "description": "Give old furniture or decor items a new life through upcycling. Get creative with paint, decoupage, or repurposing. Share your before-and-after transformations!",
+      "complete": false
+    },
+    {
+      "id": 10,
+      "categories": ["shopping", "savings"],
+      "header": "Practice a Month of Minimalism",
+      "image": "./src/assets/shopping.jpg",
+      "description": "Embrace minimalism for a month. Declutter your living space, donate items you don't need, and focus on experiences over material possessions. Share your minimalist journey!",
+      "complete": false
+    },
+    {
+      "id": 11,
+      "categories": ["recycling", "technology"],
+      "header": "Recycle Old Electronics Responsibly",
+      "image": "./src/assets/recycling.jpg",
+      "description": "Collect and recycle old electronics properly. Find local e-waste recycling centers or participate in electronic recycling events. Share information on responsible disposal!",
+      "complete": false
+    },
+    {
+      "id": 12,
+      "categories": ["holiday"],
+      "header": "Explore Your Local Trails",
+      "image": "./src/assets/holiday.jpg",
+      "description": "Discover the beauty of local trails and nature spots. Go for hikes, picnics, or birdwatching close to home. Share your favorite local nature discoveries!",
+      "complete": false
+    },
+    {
+      "id": 13,
+      "categories": ["home", "christmas"],
+      "header": "Create Homemade Eco-Friendly Decorations",
+      "image": "./src/assets/home.jpg",
+      "description": "Make your own eco-friendly decorations for the holidays. Use recycled materials, natural elements, and creativity. Share your handmade decorations with others!",
+      "complete": false
+    },
+    {
+      "id": 14,
+      "categories": ["food", "savings"],
+      "header": "Meal Prep for Zero Food Waste",
+      "image": "./src/assets/food.jpg",
+      "description": "Plan and prep meals to minimize food waste. Use ingredients wisely, freeze leftovers, and compost scraps. Share your favorite zero-waste recipes and meal prep tips!",
+      "complete": false
+    },
+    {
+      "id": 15,
+      "categories": ["technology", "savings"],
+      "header": "Set a Monthly Screen Time Limit",
+      "image": "./src/assets/technology.jpg",
+      "description": "Reduce screen time and increase productivity. Set a monthly limit for phone, computer, and TV usage. Use the extra time for hobbies, reading, or outdoor activities.",
+      "complete": false
+    },
+    {
+      "id": 16,
+      "categories": ["recycling"],
+      "header": "Collect and Recycle Plastic Waste",
+      "image": "./src/assets/recycling.jpg",
+      "description": "Take a walk and collect plastic waste from your local area. Dispose of it properly in recycling bins. Document your efforts to raise awareness about plastic pollution!",
+      "complete": false
+    },
+    {
+      "id": 17,
+      "categories": ["home", "savings"],
+      "header": "Implement Energy-Saving Habits",
+      "image": "./src/assets/home.jpg",
+      "description": "Save energy at home by adopting habits like turning off lights when not needed, using energy-efficient appliances, and unplugging chargers. Track your energy bill savings!",
+      "complete": false
+    },
+    {
+      "id": 18,
+      "categories": ["food"],
+      "header": "Try a Plant-Based Diet for a Week",
+      "image": "./src/assets/food.jpg",
+      "description": "Experiment with a plant-based diet for a week. Explore delicious vegetarian and vegan recipes. Share your favorite plant-based meals and any positive changes you notice!",
+      "complete": false
+    },
+    {
+      "id": 19,
+      "categories": ["recycling", "savings"],
+      "header": "Start a Recycling Challenge",
+      "image": "./src/assets/recycling.jpg",
+      "description": "Challenge yourself to recycle more. Set a goal to reduce landfill waste by properly recycling paper, plastic, glass, and metal items. Share your progress and tips!",
+      "complete": false
+    },
+    {
+      "id": 20,
+      "categories": ["christmas", "holiday"],
+      "header": "Gift Experiences Instead of Things",
+      "image": "./src/assets/christmas.jpg",
+      "description": "Shift your gift-giving focus to experiences rather than physical items. Plan experiences like tickets to shows, workshops, or outdoor adventures. Share creative experience gift ideas!",
+      "complete": false
+    },
+    {
+      "id": 21,
+      "categories": ["food", "christmas"],
+      "header": "Switch to Vegetarian Diet for a Month",
+      "image": "./src/assets/food.jpg",
+      "description": "Try a vegetarian diet for a whole month. Explore plant-based recipes and discover new flavors. Share your favorite vegetarian meals with others!",
+      "complete": false
+    },
+    {
+      "id": 22,
+      "categories": ["transportation"],
+      "header": "Bike Instead of Driving Three Days a Week",
+      "image": "./src/assets/transportation.jpg",
+      "description": "Reduce your carbon footprint by choosing to bike instead of driving at least three days a week. Enjoy the fresh air and stay active!",
+      "complete": false
+    },
+    {
+      "id": 23,
+      "categories": ["home", "recycling"],
+      "header": "Start a Home Recycling Program",
+      "image": "./src/assets/home.jpg",
+      "description": "Create a recycling station at home. Separate paper, plastic, glass, and other recyclables. Encourage your family to join in and make recycling a habit!",
+      "complete": false
+    },
+    {
+      "id": 24,
+      "categories": ["shopping", "savings"],
+      "header": "Shop Secondhand for a Month",
+      "image": "./src/assets/shopping.jpg",
+      "description": "Challenge yourself to buy only secondhand items for a month. Explore thrift stores, online marketplaces, and vintage shops. Share your best finds!",
+      "complete": false
+    }
+  ]
+}

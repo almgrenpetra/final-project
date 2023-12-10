@@ -1,0 +1,110 @@
+@import "ColorTheme.css";
+
+.challenge-list {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.challenge-card {
+  width: 320px;
+  height: 550px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 16px;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  position: relative;
+}
+
+.card-header {
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 213px;
+  border-radius: 16px 16px 0 0;
+}
+
+.heart-container {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.heart {
+  width: 100%;
+  height: 100%;
+  transition: scale 0.3s ease;
+}
+
+.heart:hover {
+  scale: 1.2;
+}
+
+.card-body {
+  height: 248px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category {
+  margin: 3px 0;
+  padding: 3px 9px;
+  border-radius: 16px;
+  font-size: 12px;
+}
+
+.category + .category {
+  margin-left: 6px;
+}
+
+.card-body h3 {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.card-footer {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #9fbf8e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-button:hover {
+  background: #6f915f;
+}

@@ -1,17 +1,44 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  font-family: "Quicksand", sans-serif;
+}
+
+h2 {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 16px 5px;
+  text-align: center;
+  font-size: 12px;
+  color: #4e5a44;
+}
+
+.new-line {
+  display: block;
+}
+
+.emphasize {
+  font-style: italic;
+}
+
+@media (min-width: 667px) {
+  h2 {
+    font-size: 16px;
+  }
 }

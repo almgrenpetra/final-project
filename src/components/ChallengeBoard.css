@@ -1,0 +1,159 @@
+@import "ColorTheme.css";
+
+.animation-container {
+  margin-top: 25px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.animation-container h3 {
+  font-size: 16px;
+}
+
+.animation-container p {
+  max-width: 384px;
+  font-size: 12px;
+}
+
+.animation {
+  max-width: 500px;
+}
+
+.challenges {
+  margin: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.challenge {
+  margin: 16px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.challenge h3 {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  padding: 8px 16px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.challenge p {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.footer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #6f915f, transparent) 5;
+}
+
+.footer p {
+  margin-left: 27px;
+  padding: 0;
+  color: #6f915f;
+  font-weight: bold;
+}
+
+.delete-button {
+  background-color: #bb5e5e;
+  color: #fafafa;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transition: transform 300ms ease-in-out;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+}
+
+.checkbox {
+  padding-top: 2px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #6f915f;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #6f915f;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #fafafa;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+@media (min-width: 667px) {
+  .animation-container {
+    margin-top: 50px;
+  }
+
+  .animation-container h3 {
+    font-size: 20px;
+  }
+
+  .animation-container p {
+    font-size: 16px;
+  }
+}

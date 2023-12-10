@@ -1,0 +1,68 @@
+/* olive */
+.food {
+  background: #a4a167;
+  background: linear-gradient(to bottom, #a4a167, #54572c);
+  color: #fafafa;
+}
+
+/* .copper */
+.transportation {
+  background: #b87333;
+  background: linear-gradient(to bottom, #b87333, #4d2713);
+  color: #fafafa;
+}
+
+/* brass */
+.home {
+  background: #d1913c;
+  background: linear-gradient(to bottom, #ffd194, #d1913c);
+  color: #fafafa;
+}
+
+/* moss */
+.shopping {
+  background: #8c9774;
+  background: linear-gradient(to bottom, #8c9774, #384934);
+  color: #fafafa;
+}
+
+/* bronze */
+.technology {
+  background: #c1875d;
+  background: linear-gradient(to bottom, #c1875d, #5b3b15);
+  color: #fafafa;
+}
+
+/* sienna */
+.holiday {
+  background: #8c4827;
+  background: linear-gradient(to bottom, #a0522d, #3e1f0f);
+  color: #fafafa;
+}
+
+/* terracotta */
+.savings {
+  background: #b76e79;
+  background: linear-gradient(to bottom, #b76e79, #673636);
+  color: #fafafa;
+}
+
+/* sage */
+.recycling {
+  background: #8aa69b;
+  background: linear-gradient(to bottom, #8aa69b, #304f4a);
+  color: #fafafa;
+}
+
+/* green */
+.green {
+  background: #8db596;
+  background: linear-gradient(to bottom, #8db596, #306850);
+  color: #fafafa;
+}
+
+.christmas {
+  background: #e74c3c;
+  background: linear-gradient(to bottom, #e74c3c, #81261d);
+  color: #fff;
+}
