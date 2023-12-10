@@ -26,7 +26,10 @@ export const MyPage = () => {
               <h3 className={`challenge-header ${challenge.categories[0]}`}>
                 {challenge.header}
               </h3>
-              <img className="completed-img" src={challenge.image} />
+              <img
+                className="completed-img"
+                src={`./src/assets/${challenge.categories[0]}.jpg`}
+              />
               <div className="footer">
                 <button
                   className="modal-button"

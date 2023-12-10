@@ -20,7 +20,11 @@ export const Modal = ({ open, onClose, challenge }) => {
             }}
             className="modal-container"
           >
-            <img className="modal-img" src={challenge.image} alt="" />
+            <img
+              className="modal-img"
+              src={`./src/assets/${challenge.categories[0]}.jpg`}
+              alt=""
+            />
             <div className="modal-right">
               <p onClick={onClose} className="close-cross">
                 X

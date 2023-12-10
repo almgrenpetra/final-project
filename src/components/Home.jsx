@@ -46,10 +46,14 @@ export const Home = () => {
           <div key={challenge.id}>
             <div className="challenge-card">
               <div className="card-header">
-                <img className="card-img" src={challenge.image} />
+                <img
+                  className="card-img"
+                  src={`./src/assets/${challenge.categories[0]}.jpg`}
+                />
               </div>
               <div className="heart-container">
-                {selectedChallenges.some((item) => item.id === challenge.id) ? (
+                {selectedChallenges &&
+                selectedChallenges.some((item) => item.id === challenge.id) ? (
                   <img
                     onClick={() =>
                       dispatch(
