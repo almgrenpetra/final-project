@@ -48,7 +48,7 @@ export const Home = () => {
               <div className="card-header">
                 <img
                   className="card-img"
-                  src={`./src/assets/${challenge.categories[0]}.jpg`}
+                  src={`./assets/${challenge.categories[0]}.jpg`}
                 />
               </div>
               <div className="heart-container">

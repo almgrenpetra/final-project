@@ -11,9 +11,8 @@ export const ChallengeBoard = () => {
   }, []);
 
   const challenges = useSelector((store) => store.challengeBoard.challenges);
-  const notCompletedChallenges = challenges.filter(
-    (challenge) => challenge.complete !== true
-  );
+  const notCompletedChallenges =
+    challenges && challenges.filter((challenge) => challenge.complete !== true);
 
   return (
     <>
