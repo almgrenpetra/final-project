@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { challengeBoard } from "../reducers/challengeBoard";
 import { NoSavedChallenges } from "./NoSavedChallenges";
+import delete_icon from "../assets/delete.png";
+
 import "./MyPage.css";
 
 export const MyPage = () => {
@@ -46,7 +48,7 @@ export const MyPage = () => {
 
                   <img
                     className="delete-icon"
-                    src="./src/assets/delete.png"
+                    src={delete_icon}
                     alt="delete-icon"
                     onClick={() =>
                       dispatch(
