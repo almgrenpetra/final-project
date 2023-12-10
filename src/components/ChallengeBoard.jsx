@@ -18,7 +18,9 @@ export const ChallengeBoard = () => {
     <>
       <div className="board">
         <h2> My ChallengeBoard</h2>
-        {notCompletedChallenges.length === 0 && <EmptyChallengeBoard />}
+        {notCompletedChallenges && notCompletedChallenges.length === 0 && (
+          <EmptyChallengeBoard />
+        )}
         <div className="challenges">
           {notCompletedChallenges.map((challenge) => (
             <div key={challenge.id} className="challenge">

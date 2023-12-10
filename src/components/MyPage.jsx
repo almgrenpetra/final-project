@@ -18,7 +18,9 @@ export const MyPage = () => {
     <>
       <div className="board">
         <h2> My Completed Challenges</h2>
-        {completedChallenges.length === 0 && <NoSavedChallenges />}
+        {completedChallenges && completedChallenges.length === 0 && (
+          <NoSavedChallenges />
+        )}
         <div className="challenges">
           {completedChallenges.map((challenge) => (
             <div key={challenge.id} className="challenge">

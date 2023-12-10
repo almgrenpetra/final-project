@@ -23,9 +23,9 @@ export const challengeBoard = createSlice({
       state.challenges = JSON.parse(localStorage.getItem("challengeList"));
     },
     addChallenge: (state, { payload }) => {
-      const alreadyExists = state.challenges.find(
-        (challenge) => challenge.id === payload.id
-      );
+      const alreadyExists =
+        state.challenges &&
+        state.challenges.find((challenge) => challenge.id === payload.id);
 
       if (!alreadyExists) {
         state.challenges.push(payload);
@@ -33,9 +33,9 @@ export const challengeBoard = createSlice({
       localStorage.setItem("challengeList", JSON.stringify(state.challenges));
     },
     toggleChallenge: (state, { payload }) => {
-      const currentTask = state.challenges.find(
-        (challenge) => challenge.id === payload.id
-      );
+      const currentTask =
+        state.challenges &&
+        state.challenges.find((challenge) => challenge.id === payload.id);
       currentTask.complete = !currentTask.complete;
       localStorage.setItem("challengeList", JSON.stringify(state.challenges));
     },
