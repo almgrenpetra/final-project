@@ -22,36 +22,41 @@ export const MyPage = () => {
           <NoSavedChallenges />
         )}
         <div className="challenges">
-          {completedChallenges.map((challenge) => (
-            <div key={challenge.id} className="challenge">
-              <h3 className={`challenge-header ${challenge.categories[0]}`}>
-                {challenge.header}
-              </h3>
-              <img
-                className="completed-img"
-                src={`./src/assets/${challenge.categories[0]}.jpg`}
-              />
-              <div className="footer">
-                <button
-                  className="modal-button"
-                  onClick={() =>
-                    dispatch(challengeBoard.actions.toggleChallenge(challenge))
-                  }
-                >
-                  Do this challenge again
-                </button>
-
+          {notCompletedChallenges &&
+            completedChallenges.map((challenge) => (
+              <div key={challenge.id} className="challenge">
+                <h3 className={`challenge-header ${challenge.categories[0]}`}>
+                  {challenge.header}
+                </h3>
                 <img
-                  className="delete-icon"
-                  src="./src/assets/delete.png"
-                  alt="delete-icon"
-                  onClick={() =>
-                    dispatch(challengeBoard.actions.deleteChallenge(challenge))
-                  }
+                  className="completed-img"
+                  src={`./src/assets/${challenge.categories[0]}.jpg`}
                 />
+                <div className="footer">
+                  <button
+                    className="modal-button"
+                    onClick={() =>
+                      dispatch(
+                        challengeBoard.actions.toggleChallenge(challenge)
+                      )
+                    }
+                  >
+                    Do this challenge again
+                  </button>
+
+                  <img
+                    className="delete-icon"
+                    src="./src/assets/delete.png"
+                    alt="delete-icon"
+                    onClick={() =>
+                      dispatch(
+                        challengeBoard.actions.deleteChallenge(challenge)
+                      )
+                    }
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </>

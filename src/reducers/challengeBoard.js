@@ -23,6 +23,10 @@ export const challengeBoard = createSlice({
       state.challenges = JSON.parse(localStorage.getItem("challengeList"));
     },
     addChallenge: (state, { payload }) => {
+      if (state.challenges === null || state.challenges === undefined) {
+        state.challenges = [];
+      }
+
       const alreadyExists =
         state.challenges &&
         state.challenges.find((challenge) => challenge.id === payload.id);

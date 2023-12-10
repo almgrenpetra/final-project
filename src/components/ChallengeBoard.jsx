@@ -22,40 +22,43 @@ export const ChallengeBoard = () => {
           <EmptyChallengeBoard />
         )}
         <div className="challenges">
-          {notCompletedChallenges.map((challenge) => (
-            <div key={challenge.id} className="challenge">
-              <h3 className={`challenge-header ${challenge.categories[0]}`}>
-                {challenge.header}
-              </h3>
-              <p className="description">{challenge.description}</p>
-              <div className="footer">
-                <label className="checkbox" htmlFor={challenge.id}>
-                  <input
-                    className="checkbox-input"
-                    type="checkbox"
-                    id={challenge.id}
-                    checked={challenge.complete}
-                    onChange={() =>
+          {notCompletedChallenges &&
+            notCompletedChallenges.map((challenge) => (
+              <div key={challenge.id} className="challenge">
+                <h3 className={`challenge-header ${challenge.categories[0]}`}>
+                  {challenge.header}
+                </h3>
+                <p className="description">{challenge.description}</p>
+                <div className="footer">
+                  <label className="checkbox" htmlFor={challenge.id}>
+                    <input
+                      className="checkbox-input"
+                      type="checkbox"
+                      id={challenge.id}
+                      checked={challenge.complete}
+                      onChange={() =>
+                        dispatch(
+                          challengeBoard.actions.toggleChallenge(challenge)
+                        )
+                      }
+                    />
+                    <span className="checkmark"></span>
+                    <p>Are your mission completed?</p>
+                  </label>
+
+                  <img
+                    className="delete-icon"
+                    src="./src/assets/delete.png"
+                    alt="delete-icon"
+                    onClick={() =>
                       dispatch(
-                        challengeBoard.actions.toggleChallenge(challenge)
+                        challengeBoard.actions.deleteChallenge(challenge)
                       )
                     }
                   />
-                  <span className="checkmark"></span>
-                  <p>Are your mission completed?</p>
-                </label>
-
-                <img
-                  className="delete-icon"
-                  src="./src/assets/delete.png"
-                  alt="delete-icon"
-                  onClick={() =>
-                    dispatch(challengeBoard.actions.deleteChallenge(challenge))
-                  }
-                />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </>
