@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Modal } from "./Modal";
 import { challengeBoard } from "../reducers/challengeBoard";
+import { CardImages } from "./CardImages";
 import data from "../data.json";
 import heart_empty from "../assets/heart_empty.svg";
 import heart_filled from "../assets/heart_filled.svg";
@@ -48,7 +49,7 @@ export const Home = () => {
               <div className="card-header">
                 <img
                   className="card-img"
-                  src={`./src/assets/${challenge.categories[0]}.jpg`}
+                  src={CardImages[challenge.categories[0]]}
                 />
               </div>
               <div className="heart-container">
