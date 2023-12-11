@@ -34,7 +34,7 @@ export const MyPage = () => {
                   className="completed-img"
                   src={CardImages[challenge.categories[0]]}
                 />
-                <div className="footer">
+                <div className="mypage-footer">
                   <button
                     className="modal-button"
                     onClick={() =>
