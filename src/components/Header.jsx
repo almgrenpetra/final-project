@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { challengeBoard } from "../reducers/challengeBoard";
 import "./Header.css";
 
-export const Header = ({ text }) => {
+export const Header = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const categories = useSelector((store) => store.challengeBoard.categories);
