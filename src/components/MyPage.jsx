@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { challengeBoard } from "../reducers/challengeBoard";
 import { NoSavedChallenges } from "./NoSavedChallenges";
+import { CardImages } from "./CardImages";
 import delete_icon from "../assets/delete.png";
 import "./MyPage.css";
 
@@ -31,7 +32,7 @@ export const MyPage = () => {
                 </h3>
                 <img
                   className="completed-img"
-                  src={`./src/assets/${challenge.categories[0]}.jpg`}
+                  src={CardImages[challenge.categories[0]]}
                 />
                 <div className="footer">
                   <button

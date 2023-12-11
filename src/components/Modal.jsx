@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { challengeBoard } from "../reducers/challengeBoard";
+import { CardImages } from "./CardImages";
 import "./Modal.css";
 
 export const Modal = ({ open, onClose, challenge }) => {
@@ -22,7 +23,7 @@ export const Modal = ({ open, onClose, challenge }) => {
           >
             <img
               className="modal-img"
-              src={`./src/assets/${challenge.categories[0]}.jpg`}
+              src={CardImages[challenge.categories[0]]}
               alt=""
             />
             <div className="modal-right">
