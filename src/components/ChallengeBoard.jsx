@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { challengeBoard } from "../reducers/challengeBoard";
 import { EmptyChallengeBoard } from "./EmptyChallengeBoard";
 import delete_icon from "../assets/delete.png";
@@ -7,6 +8,7 @@ import "./ChallengeBoard.css";
 
 export const ChallengeBoard = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [selectedChallenge, setSelectedChallenge] = useState(null);
 
   useEffect(() => {
@@ -17,8 +19,12 @@ export const ChallengeBoard = () => {
   const notCompletedChallenges =
     challenges && challenges.filter((challenge) => challenge.complete !== true);
 
+  const handleCompleted = (challenge) => {
+    dispatch(challengeBoard.actions.toggleChallenge(challenge));
+    navigate("/mypage");
+  };
+
   const handleDelete = (challenge) => {
-    console.log(challenge.id);
     setSelectedChallenge(challenge);
   };
 
@@ -53,11 +59,12 @@ export const ChallengeBoard = () => {
                       type="checkbox"
                       id={challenge.id}
                       checked={challenge.complete}
-                      onChange={() =>
-                        dispatch(
-                          challengeBoard.actions.toggleChallenge(challenge)
-                        )
-                      }
+                      // onChange={() =>
+                      //   dispatch(
+                      //     challengeBoard.actions.toggleChallenge(challenge)
+                      //   )
+                      // }
+                      onChange={() => handleCompleted(challenge)}
                     />
                     <span className="checkmark"></span>
                     <p>Are your mission completed?</p>
