@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { challengeBoard } from "../reducers/challengeBoard";
 import { CardImages } from "./CardImages";
@@ -5,10 +6,11 @@ import "./Modal.css";
 
 export const Modal = ({ open, onClose, challenge }) => {
   const dispatch = useDispatch();
+  const [showMessage, setShowMessage] = useState(false);
 
   const addToBoard = () => {
-    onClose();
     dispatch(challengeBoard.actions.addChallenge(challenge));
+    setShowMessage(true);
   };
 
   return (
@@ -32,13 +34,19 @@ export const Modal = ({ open, onClose, challenge }) => {
               </p>
               <div className="content">
                 <h2>{challenge.header}</h2>
-                <p>{challenge.description}</p>
+                {showMessage ? (
+                  <p>This challenge has been added to your board!</p>
+                ) : (
+                  <p>{challenge.description}</p>
+                )}
               </div>
 
               <div className="button-container">
-                <button className="add-button" onClick={addToBoard}>
-                  Add to board
-                </button>
+                {!showMessage && (
+                  <button className="add-button" onClick={addToBoard}>
+                    Add to board
+                  </button>
+                )}
                 <button className="close-button" onClick={onClose}>
                   Close
                 </button>
