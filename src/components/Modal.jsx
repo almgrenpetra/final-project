@@ -6,11 +6,11 @@ import "./Modal.css";
 
 export const Modal = ({ open, onClose, challenge }) => {
   const dispatch = useDispatch();
-  const [showMessage, setShowMessage] = useState(false);
+  const [isAdded, setIsAdded] = useState(false);
 
   const addToBoard = () => {
     dispatch(challengeBoard.actions.addChallenge(challenge));
-    setShowMessage(true);
+    setIsAdded(true);
   };
 
   return (
@@ -34,7 +34,7 @@ export const Modal = ({ open, onClose, challenge }) => {
               </p>
               <div className="content">
                 <h2>{challenge.header}</h2>
-                {showMessage ? (
+                {isAdded ? (
                   <p>This challenge has been added to your board!</p>
                 ) : (
                   <p>{challenge.description}</p>
@@ -42,12 +42,18 @@ export const Modal = ({ open, onClose, challenge }) => {
               </div>
 
               <div className="button-container">
-                {!showMessage && (
+                {!isAdded && (
                   <button className="add-button" onClick={addToBoard}>
                     Add to board
                   </button>
                 )}
-                <button className="close-button" onClick={onClose}>
+                <button
+                  className="close-button"
+                  onClick={() => {
+                    onClose();
+                    setIsAdded(false);
+                  }}
+                >
                   Close
                 </button>
               </div>
