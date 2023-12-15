@@ -40,6 +40,7 @@
   background: rgba(255, 255, 255, 0.7);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: relative;
 }
 
 .challenge h3 {
@@ -142,6 +143,35 @@
   border: solid #fafafa;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+}
+
+.confirmation-modal {
+  max-width: 85%;
+  background: #57724b;
+  color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-buttons {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-buttons button {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 10px 20px;
+  color: #57724b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 @media (min-width: 667px) {

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { challengeBoard } from "../reducers/challengeBoard";
 import { EmptyChallengeBoard } from "./EmptyChallengeBoard";
@@ -7,6 +7,8 @@ import "./ChallengeBoard.css";
 
 export const ChallengeBoard = () => {
   const dispatch = useDispatch();
+  const [selectedChallenge, setSelectedChallenge] = useState(null);
+
   useEffect(() => {
     dispatch(challengeBoard.actions.updateChallengeArray());
   }, []);
@@ -14,6 +16,20 @@ export const ChallengeBoard = () => {
   const challenges = useSelector((store) => store.challengeBoard.challenges);
   const notCompletedChallenges =
     challenges && challenges.filter((challenge) => challenge.complete !== true);
+
+  const handleDelete = (challenge) => {
+    console.log(challenge.id);
+    setSelectedChallenge(challenge);
+  };
+
+  const handleConfirmDelete = () => {
+    dispatch(challengeBoard.actions.deleteChallenge(selectedChallenge));
+    setSelectedChallenge(null);
+  };
+
+  const handleCancelDelete = () => {
+    setSelectedChallenge(null);
+  };
 
   return (
     <>
@@ -51,13 +67,23 @@ export const ChallengeBoard = () => {
                     className="delete-icon"
                     src={delete_icon}
                     alt="delete-icon"
-                    onClick={() =>
-                      dispatch(
-                        challengeBoard.actions.deleteChallenge(challenge)
-                      )
-                    }
+                    onClick={() => handleDelete(challenge)}
                   />
                 </div>
+                {selectedChallenge && selectedChallenge.id === challenge.id && (
+                  <div className="confirmation-modal">
+                    <p>
+                      Are you sure you want to remove this challenge from your
+                      board?
+                    </p>
+                    <div className="modal-buttons">
+                      <button onClick={handleConfirmDelete}>
+                        Yes, I'm sure
+                      </button>
+                      <button onClick={handleCancelDelete}>Actually no</button>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
         </div>

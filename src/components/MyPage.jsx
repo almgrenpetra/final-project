@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { challengeBoard } from "../reducers/challengeBoard";
 import { NoSavedChallenges } from "./NoSavedChallenges";
@@ -8,6 +8,8 @@ import "./MyPage.css";
 
 export const MyPage = () => {
   const dispatch = useDispatch();
+  const [selectedChallenge, setSelectedChallenge] = useState(null);
+
   useEffect(() => {
     dispatch(challengeBoard.actions.updateChallengeArray());
   }, []);
@@ -15,6 +17,19 @@ export const MyPage = () => {
   const challenges = useSelector((store) => store.challengeBoard.challenges);
   const completedChallenges =
     challenges && challenges.filter((challenge) => challenge.complete === true);
+
+  const handleDelete = (challenge) => {
+    setSelectedChallenge(challenge);
+  };
+
+  const handleConfirmDelete = () => {
+    dispatch(challengeBoard.actions.deleteChallenge(selectedChallenge));
+    setSelectedChallenge(null);
+  };
+
+  const handleCancelDelete = () => {
+    setSelectedChallenge(null);
+  };
 
   return (
     <>
@@ -51,13 +66,25 @@ export const MyPage = () => {
                     className="delete-icon"
                     src={delete_icon}
                     alt="delete-icon"
-                    onClick={() =>
-                      dispatch(
-                        challengeBoard.actions.deleteChallenge(challenge)
-                      )
-                    }
+                    onClick={() => handleDelete(challenge)}
                   />
                 </div>
+                {selectedChallenge && selectedChallenge.id === challenge.id && (
+                  <div className="confirmation-modal">
+                    <p>
+                      Are you sure you want to remove this challenge from your
+                      completed challenges?
+                    </p>
+                    <div className="modal-buttons">
+                      <button onClick={handleConfirmDelete}>
+                        Yes, I'm sure!
+                      </button>
+                      <button onClick={handleCancelDelete}>
+                        Of course not!
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
         </div>
