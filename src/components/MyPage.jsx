@@ -33,6 +33,7 @@ export const MyPage = () => {
                 <img
                   className="completed-img"
                   src={CardImages[challenge.categories[0]]}
+                  alt={CardImages[challenge.categories[0]]}
                 />
                 <div className="mypage-footer">
                   <button

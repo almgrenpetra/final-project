@@ -50,6 +50,7 @@ export const Home = () => {
                 <img
                   className="card-img"
                   src={CardImages[challenge.categories[0]]}
+                  alt={CardImages[challenge.categories[0]]}
                 />
               </div>
               <div className="heart-container">

@@ -32,6 +32,7 @@ export const Header = () => {
         {isHomeActive() && (
           <div className="select-container">
             <select
+              aria-label="choose category"
               className="select"
               onChange={(event) =>
                 dispatch(challengeBoard.actions.setCategory(event.target.value))

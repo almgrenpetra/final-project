@@ -24,7 +24,7 @@ export const Modal = ({ open, onClose, challenge }) => {
             <img
               className="modal-img"
               src={CardImages[challenge.categories[0]]}
-              alt=""
+              alt={CardImages[challenge.categories[0]]}
             />
             <div className="modal-right">
               <p onClick={onClose} className="close-cross">

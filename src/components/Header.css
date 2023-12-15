@@ -1,5 +1,5 @@
 header {
-  background-color: #6f915f;
+  background: #57724b;
   padding: 20px 20px 10px 20px;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ a {
   border: 2px solid #6f915f;
   border-radius: 8px;
   background: #fff;
-  color: #6f915f;
+  color: #57724b;
   font-size: 16px;
   cursor: pointer;
   outline: none;
